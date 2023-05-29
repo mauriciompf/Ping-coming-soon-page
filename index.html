@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <title>Frontend Mentor | Ping coming soon page</title>
 </head>
 <body>
@@ -17,24 +21,35 @@
         <h1 class="main__title">
           We are launching <strong class="strong">soon!</strong>
         </h1>
-        <h3 class="main__subtitle">
+        <p class="main__subtitle">
           Subscribe and get notified
-        </h3>
+        </p>
       </div>
       <form class="main__form">
-        <input class="main__form-email" type="email" placeholder="example@email/com" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" required>
+        <input class="main__form-email" type="email" placeholder="Your email address..." pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" required>
         <button class="main__form-submit" type="submit">
           Notify Me
         </button>
       </form>
-      <div class="main__dashboard-image">
+      <div class="main__dashboard-image"> 
         <img src="./images/illustration-dashboard.png" alt="Illustration dashboard">
       </div>
     </div>
   </main>
   <footer class="footer">
     <div class="footer__container">
-      <p class="footer__copy-right">
+      <div class="footer__midias">
+        <a class="footer__midias-link" href="#" aria-label="Enter Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a class="footer__midias-link" href="#" aria-label="Enter Twitter">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a class="footer__midias-link" href="#" aria-label="Enter Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+      <p class="footer__copyright">
         &copy; Copyright Ping. All rights reserved.
       </p>
     </div>
