@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  display: block;
+  background: none;
+  border: none;
+  font: inherit;
+}
+
+a {
+  text-transform: none;
+  text-decoration: none;
+}
+
+.center, .footer, .main__container {
+  text-align: center;
+}
+
+.main {
+  display: grid;
+  place-items: center;
+  height: 85vh;
+}
+.main__container {
+  width: min(65ch, 100% - 4rem);
+  margin-inline: auto;
+}
+.main__logo img {
+  margin-inline: auto;
+  width: 60px;
+}
+.main__text-content {
+  margin: 2rem 0;
+}
+.main__subtitle {
+  margin-top: 1rem;
+}
+.main .input, .main .main__form-submit, .main .main__form-email {
+  width: 100%;
+  border-radius: 1rem;
+}
+.main__form-email {
+  padding: 0.6rem 2rem;
+}
+.main__form-submit {
+  margin-top: 0.5rem;
+  padding: 0.5rem 2rem;
+}
+.main__dashboard-image {
+  margin-top: 4rem;
+}
+
+.footer__midias {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.footer__midias-link {
+  display: grid;
+  place-items: center;
+  position: relative;
+  width: 2.1875rem;
+  aspect-ratio: 1/1;
+  font-size: 1.2rem;
+  border-radius: 1.5625rem;
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 20px;
+}
+
+.main__title {
+  font-weight: 300;
+  color: hsl(0, 0%, 59%);
+  font-size: 1.5rem;
+}
+.main__title .strong {
+  color: hsl(209, 33%, 12%);
+  font-weight: 700;
+}
+.main__subtitle {
+  font-weight: 300;
+  color: hsl(209, 33%, 12%);
+  font-size: 0.9rem;
+}
+.main__form-email {
+  border: 1px solid hsl(223, 100%, 88%);
+  font-size: 0.9rem;
+}
+.main__form-email ::placeholder {
+  color: hsl(223, 100%, 88%);
+  opacity: 1;
+}
+.main__form-email :-ms-input-placeholder {
+  color: hsl(223, 100%, 88%);
+}
+.main__form-email ::-ms-input-placeholder {
+  color: hsl(223, 100%, 88%);
+}
+.main__form-submit {
+  color: #fff;
+  background-color: hsl(223, 87%, 63%);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0px 6px 12px 0px hsl(223, 100%, 88%);
+}
+
+.footer__copyright {
+  font-size: 0.9rem;
+  color: hsl(0, 0%, 59%);
+}
+.footer__midias-link {
+  border: 1px solid hsl(223, 100%, 88%);
+}
+.footer__midias-link i {
+  color: hsl(223, 87%, 63%);
+}
+
+/*# sourceMappingURL=style.css.map */

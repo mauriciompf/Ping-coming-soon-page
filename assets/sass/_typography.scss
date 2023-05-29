@@ -1,0 +1,80 @@
+@use "colors" as *;
+
+$fz: 20px;
+$ff: 'Libre Franklin', sans-serif;
+
+$fw-300: 300; 
+$fw-600: 600;
+$fw-700: 700;
+
+$fz-paragraph: .9rem;
+
+body {
+    font-family: $ff;
+    font-size: $fz;
+}
+
+.main {
+    &__title {
+        font-weight: $fw-300;
+        color: $clr-gray;
+        font-size: 1.5rem;
+
+        .strong {
+            color: $clr-very-dark-blue;
+            font-weight: $fw-700;
+        }
+    }
+
+    &__subtitle {
+        font-weight: $fw-300;
+        color: $clr-very-dark-blue;
+        font-size: $fz-paragraph;
+    }
+
+    &__form {
+        &-email {
+            border: 1px solid $clr-pale-blue;
+            font-size: $fz-paragraph;
+
+            ::placeholder {
+                color: $clr-pale-blue;
+                opacity: 1;
+            }
+
+            :-ms-input-placeholder {
+                color: $clr-pale-blue;
+              }
+              
+              ::-ms-input-placeholder {
+                color: $clr-pale-blue;
+              }
+        }
+
+        &-submit {
+            color: #fff;
+            background-color: $clr-blue;
+            font-weight: $fw-600;
+            font-size: $fz-paragraph;
+            cursor: pointer;
+            box-shadow: 0px 6px 12px 0px $clr-pale-blue;
+        }
+    }
+}
+
+.footer {
+    &__copyright {
+        font-size: $fz-paragraph;
+        color: $clr-gray;
+    }
+
+    &__midias {
+        &-link {
+            border: 1px solid $clr-pale-blue;
+
+            i {
+                color: $clr-blue;
+            }
+        }
+    }
+}

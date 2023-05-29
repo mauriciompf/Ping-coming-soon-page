@@ -1,0 +1,72 @@
+.center {
+    text-align: center;
+}
+
+.main {
+    display: grid;
+    place-items: center;
+    height: 85vh;
+
+    &__container {
+        @extend .center;
+        width: min(65ch, 100% - 4rem);
+        margin-inline: auto;
+    }
+
+    &__logo img {
+        margin-inline: auto;
+        width: 60px;
+    }
+
+    &__text-content {
+        margin: 2rem 0;
+    }
+
+    &__subtitle {
+        margin-top: 1rem;
+    }
+
+    .input {
+        width: 100%;
+        border-radius: 1rem;
+    }
+
+    &__form {
+        &-email {
+            @extend .input;
+            padding: 0.6rem 2rem;
+        }
+
+        &-submit {
+            @extend .input;
+            margin-top: 0.5rem;
+            padding: 0.5rem 2rem;
+        }
+    }
+
+    &__dashboard-image {
+        margin-top: 4rem;
+    }
+}
+
+.footer {
+    @extend .center;
+
+
+    &__midias {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-bottom: 1rem;
+        
+        &-link {
+            display: grid;
+            place-items: center;
+            position: relative;
+            width: 2.1875rem;
+            aspect-ratio: 1 / 1;
+            font-size: 1.2rem;
+            border-radius: 1.5625rem;
+        }
+    }
+}
