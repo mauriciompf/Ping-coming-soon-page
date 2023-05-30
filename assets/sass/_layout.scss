@@ -1,11 +1,17 @@
+@use './midias-queries' as *;
+
 .center {
     text-align: center;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 85vh 15vh;
 }
 
 .main {
     display: grid;
     place-items: center;
-    height: 85vh;
 
     &__container {
         @extend .center;
@@ -15,11 +21,15 @@
 
     &__logo img {
         margin-inline: auto;
-        width: 60px;
+        width: clamp(3.5rem, calc(3.23rem + 2.34vw), 4.44rem);
     }
 
     &__text-content {
         margin: 2rem 0;
+
+        @include desktop {
+            margin-top: 1rem;
+        }
     }
 
     &__subtitle {
@@ -28,10 +38,37 @@
 
     .input {
         width: 100%;
-        border-radius: 1rem;
+        border-radius: 2rem;
     }
 
     &__form {
+        @include desktop {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        &-input-box {
+            width: 100%;
+            position: relative;
+
+            @include desktop {
+                max-width: 50%;
+            }
+
+            &--error {
+                position: relative;
+                left: 0;
+                top: 0;
+                
+                @include desktop {
+                    position: absolute;
+                    left: 1rem;
+                    top: 2.7rem;
+                }
+            }
+        }
+
         &-email {
             @extend .input;
             padding: 0.6rem 2rem;
@@ -41,17 +78,26 @@
             @extend .input;
             margin-top: 0.5rem;
             padding: 0.5rem 2rem;
+
+            @include desktop {
+                margin: 0;
+                max-width: 10rem;
+            }
         }
     }
 
     &__dashboard-image {
-        margin-top: 4rem;
+        margin-top: 2rem;
+
+        img {
+            width: 33.125rem;
+            margin-inline: auto;
+        }
     }
 }
 
 .footer {
     @extend .center;
-
 
     &__midias {
         display: flex;

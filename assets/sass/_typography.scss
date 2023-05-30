@@ -7,7 +7,9 @@ $fw-300: 300;
 $fw-600: 600;
 $fw-700: 700;
 
-$fz-paragraph: .9rem;
+$fz-paragraph: clamp(1rem, calc(.9rem + 0.36vw), 0.38rem);
+
+$transtion: .3s all ease;
 
 body {
     font-family: $ff;
@@ -18,7 +20,7 @@ body {
     &__title {
         font-weight: $fw-300;
         color: $clr-gray;
-        font-size: 1.5rem;
+        font-size: clamp(1.5rem, calc(1.02rem + 1.79vw), 3.13rem);
 
         .strong {
             color: $clr-very-dark-blue;
@@ -33,6 +35,12 @@ body {
     }
 
     &__form {
+
+        &-input-box--error {
+            font-size: .8rem;
+            color: $clr-light-red;
+        }
+
         &-email {
             border: 1px solid $clr-pale-blue;
             font-size: $fz-paragraph;
@@ -49,6 +57,10 @@ body {
               ::-ms-input-placeholder {
                 color: $clr-pale-blue;
               }
+
+            &--border {
+                border: 1px solid $clr-light-red;
+            }
         }
 
         &-submit {
@@ -58,6 +70,12 @@ body {
             font-size: $fz-paragraph;
             cursor: pointer;
             box-shadow: 0px 6px 12px 0px $clr-pale-blue;
+            transition: $transtion;
+
+            &:hover,
+            &:focus {
+                background-color: hsl(223, 87%, 70%)
+            }
         }
     }
 }
@@ -71,9 +89,20 @@ body {
     &__midias {
         &-link {
             border: 1px solid $clr-pale-blue;
+            transition: $transtion;
 
             i {
                 color: $clr-blue;
+            }
+
+            &:hover i,
+            &:focus i {
+                color: #fff;
+            }
+
+            &:hover,
+            &:focus {
+                background-color: $clr-blue;
             }
         }
     }

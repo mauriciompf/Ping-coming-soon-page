@@ -26,10 +26,14 @@ a {
   text-align: center;
 }
 
+body {
+  display: grid;
+  grid-template-rows: 85vh 15vh;
+}
+
 .main {
   display: grid;
   place-items: center;
-  height: 85vh;
 }
 .main__container {
   width: min(65ch, 100% - 4rem);
@@ -37,17 +41,50 @@ a {
 }
 .main__logo img {
   margin-inline: auto;
-  width: 60px;
+  width: clamp(3.5rem, 3.23rem + 2.34vw, 4.44rem);
 }
 .main__text-content {
   margin: 2rem 0;
+}
+@media screen and (min-width: 560px) {
+  .main__text-content {
+    margin-top: 1rem;
+  }
 }
 .main__subtitle {
   margin-top: 1rem;
 }
 .main .input, .main .main__form-submit, .main .main__form-email {
   width: 100%;
-  border-radius: 1rem;
+  border-radius: 2rem;
+}
+@media screen and (min-width: 560px) {
+  .main__form {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+}
+.main__form-input-box {
+  width: 100%;
+  position: relative;
+}
+@media screen and (min-width: 560px) {
+  .main__form-input-box {
+    max-width: 50%;
+  }
+}
+.main__form-input-box--error {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+@media screen and (min-width: 560px) {
+  .main__form-input-box--error {
+    position: absolute;
+    left: 1rem;
+    top: 2.7rem;
+  }
 }
 .main__form-email {
   padding: 0.6rem 2rem;
@@ -56,8 +93,18 @@ a {
   margin-top: 0.5rem;
   padding: 0.5rem 2rem;
 }
+@media screen and (min-width: 560px) {
+  .main__form-submit {
+    margin: 0;
+    max-width: 10rem;
+  }
+}
 .main__dashboard-image {
-  margin-top: 4rem;
+  margin-top: 2rem;
+}
+.main__dashboard-image img {
+  width: 33.125rem;
+  margin-inline: auto;
 }
 
 .footer__midias {
@@ -84,7 +131,7 @@ body {
 .main__title {
   font-weight: 300;
   color: hsl(0, 0%, 59%);
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.02rem + 1.79vw, 3.13rem);
 }
 .main__title .strong {
   color: hsl(209, 33%, 12%);
@@ -93,11 +140,15 @@ body {
 .main__subtitle {
   font-weight: 300;
   color: hsl(209, 33%, 12%);
-  font-size: 0.9rem;
+  font-size: clamp(1rem, 0.9rem + 0.36vw, 0.38rem);
+}
+.main__form-input-box--error {
+  font-size: 0.8rem;
+  color: hsl(354, 100%, 66%);
 }
 .main__form-email {
   border: 1px solid hsl(223, 100%, 88%);
-  font-size: 0.9rem;
+  font-size: clamp(1rem, 0.9rem + 0.36vw, 0.38rem);
 }
 .main__form-email ::placeholder {
   color: hsl(223, 100%, 88%);
@@ -109,24 +160,38 @@ body {
 .main__form-email ::-ms-input-placeholder {
   color: hsl(223, 100%, 88%);
 }
+.main__form-email--border {
+  border: 1px solid hsl(354, 100%, 66%);
+}
 .main__form-submit {
   color: #fff;
   background-color: hsl(223, 87%, 63%);
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: clamp(1rem, 0.9rem + 0.36vw, 0.38rem);
   cursor: pointer;
   box-shadow: 0px 6px 12px 0px hsl(223, 100%, 88%);
+  transition: 0.3s all ease;
+}
+.main__form-submit:hover, .main__form-submit:focus {
+  background-color: hsl(223, 87%, 70%);
 }
 
 .footer__copyright {
-  font-size: 0.9rem;
+  font-size: clamp(1rem, 0.9rem + 0.36vw, 0.38rem);
   color: hsl(0, 0%, 59%);
 }
 .footer__midias-link {
   border: 1px solid hsl(223, 100%, 88%);
+  transition: 0.3s all ease;
 }
 .footer__midias-link i {
   color: hsl(223, 87%, 63%);
+}
+.footer__midias-link:hover i, .footer__midias-link:focus i {
+  color: #fff;
+}
+.footer__midias-link:hover, .footer__midias-link:focus {
+  background-color: hsl(223, 87%, 63%);
 }
 
 /*# sourceMappingURL=style.css.map */
